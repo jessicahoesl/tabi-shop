@@ -1,0 +1,24 @@
+# DEVELOPMENT
+  # docker compose up app-dev
+services:
+  app-dev:
+    build:
+      context: .
+      target: deps
+    container_name: tabi-shop-dev
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - HOSTNAME=0.0.0.0
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    develop:
+      watch:
+        - action: rebuild
+          path: ./package.json
+        - action: rebuild
+          path: ./package-lock.json

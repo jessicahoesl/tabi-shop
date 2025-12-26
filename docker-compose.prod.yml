@@ -1,0 +1,33 @@
+services:
+  # PRODUCTION
+  app-prod:
+    build:
+      context: .
+      target: runner
+    container_name: tabi-shop-prod
+    restart: always
+    ports:
+      - "3000:3000"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache:uid=1001,gid=1001,mode=0755
+
+  caddy:
+    image: caddy:2.11-alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+    depends_on:
+      - app-prod
+
+volumes:
+  caddy_data:
