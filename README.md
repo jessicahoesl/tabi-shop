@@ -41,11 +41,11 @@ This project is containerized using Docker and is designed to run on any VPS (He
 
 ## 🗺️ Roadmap
 
-    [ ] Basic Product Grid
-    [ ] Stripe Checkout Integration
-    [ ] Database Integration (Supabase/PostgreSQL) for dynamic inventory
-    [ ] Automated Email Delivery (Stripe Webhooks + Resend API)
-    [ ] Admin Dashboard
+* [x] Basic Product Grid
+* [x] Stripe Checkout Integration
+* [ ] Database Integration (Supabase/PostgreSQL) for dynamic inventory
+* [ ] Automated Email Delivery (Stripe Webhooks + Resend API)
+* [ ] Admin Dashboard
 
 ## 📄 Licence
 
