@@ -43,6 +43,9 @@ This project is containerized using Docker and is designed to run on any VPS (He
 
 * [x] Basic Product Grid
 * [x] Stripe Checkout Integration
+* [x] File Download
+* [ ] Shopping cart for multiple files
+* [ ] Start Page with Welcome Text
 * [ ] Database Integration (Supabase/PostgreSQL) for dynamic inventory
 * [ ] Automated Email Delivery (Stripe Webhooks + Resend API)
 * [ ] Admin Dashboard
