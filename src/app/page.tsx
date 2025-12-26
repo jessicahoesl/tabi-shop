@@ -7,7 +7,7 @@ export default function Home() {
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-4">Tafelbilder Shop</h1>
         <p className="text-xl text-gray-600">
-          Digitale Unterrichtsmaterialien für Grundschulen
+          Digitale Unterrichtsmaterialien für Gymnasium
         </p>
       </header>
 
