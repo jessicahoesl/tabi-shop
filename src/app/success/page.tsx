@@ -29,12 +29,14 @@ function SuccessContent() {
           </div>
         )}
 
-        {/* Should validate the session ID here and show the download link */}
         <div className="bg-blue-50 border border-blue-200 rounded p-4 mb-6">
-          <p className="text-sm text-blue-800 font-medium">Download</p>
-          <p className="text-xs text-blue-600 mt-1">
-            Ihr Tafelbild wird in Kürze per E-Mail gesendet.
-          </p>
+          <p className="text-sm text-blue-800 font-medium mb-2">Ihr Download Link steht bereit:</p>
+          <a
+            href={`/api/download?session_id=${sessionId}`}
+            className="inline-block w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors text-center"
+          >
+            Jetzt PDF herunterladen
+          </a>
         </div>
 
         <Link 

@@ -35,6 +35,9 @@ export async function POST(request: Request) {
           quantity: 1,
         },
       ],
+      metadata: {
+        productId: product.id,
+      },
       mode: "payment",
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
