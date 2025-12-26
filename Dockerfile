@@ -1,5 +1,5 @@
 # 1. BASE - Install dependencies only when needed
-FROM node:25.2.1-alpine3.23@sha256:fd164609b5ab0c6d49bac138ae06c347e72261ec6ae1de32b6aa9f5ee2271110 AS base
+FROM node:24.12.0-alpine3.23@sha256:c921b97d4b74f51744057454b306b418cf693865e73b8100559189605f6955b8 AS base
 
 # 2. DEPS - Install dependencies based on the preferred package manager
 FROM base AS deps
