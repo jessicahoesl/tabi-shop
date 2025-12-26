@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 TaBi Shop (Tafelbilder Digital Store)
 
-## Getting Started
+A modern, serverless e-commerce platform built to sell digital educational resources ("Tafelbilder") for Teachers.
 
-First, run the development server:
+Build with **Next.js 16**, **TypeScript**, and **Stripe**.
 
+![Project Status](https://img.shields.io/badge/Status-In_Development-yellow)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
+
+## 🚀 Tech Stack
+
+* **Frontend:** Next.js 16 (App Router), React, TypeScript
+* **Styling:** Tailwind CSS
+* **Payments:** Stripe Checkout (Hosted Sessions)
+* **Infrastructure:** Docker (Multi-stage builds), Caddy (Reverse Proxy)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+* Docker & Docker Compose
+* Node.js 22+ (Optional, if running without Docker)
+* A Stripe Account (Test Mode)
+
+### Usage
+
+#### For Development
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker compose -f docker-compose.dev.yml up 
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### For Production
+```bash
+docker compose -f docker-compose.prod.yml up 
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ☁️ Deployment
 
-## Learn More
+This project is containerized using Docker and is designed to run on any VPS (Hetzner, DigitalOcean) behind a Caddy reverse proxy for automatic HTTPS.
 
-To learn more about Next.js, take a look at the following resources:
+## 🗺️ Roadmap
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    [ ] Basic Product Grid
+    [ ] Stripe Checkout Integration
+    [ ] Database Integration (Supabase/PostgreSQL) for dynamic inventory
+    [ ] Automated Email Delivery (Stripe Webhooks + Resend API)
+    [ ] Admin Dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 Licence
 
-## Deploy on Vercel
+MIT License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Copyright (c) 2025 Jessica Hösl
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
